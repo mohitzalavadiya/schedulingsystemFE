@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { Link } from "react-router-dom";
 
 const AvailabilityPage = () => {
   const [slots, setSlots] = useState([]);
@@ -159,14 +160,14 @@ const AvailabilityPage = () => {
         {linkId && (
           <div className="mt-4 text-center text-blue-700 font-medium">
             Link:
-            <a
-              href={`/book/${linkId}`}
+            <Link
+              to={`/book/${linkId}`}
               className="underline block mt-1"
               target="_blank"
               rel="noopener noreferrer"
             >
               {window.location.origin}/book/{linkId}
-            </a>
+            </Link>
           </div>
         )}
       </div>

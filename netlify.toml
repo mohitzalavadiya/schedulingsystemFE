@@ -1,6 +1,0 @@
-[build]
-  command = "npm run build"
-  publish = "dist" # or "build" depending on your setup
-
-[build.environment]
-  NODE_VERSION = "20.11.1"
